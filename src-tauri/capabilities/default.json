@@ -6,7 +6,9 @@
     "main"
   ],
   "remote": {
-    "urls": ["http://10.0.2.2"]
+    "urls": [
+      "http://10.0.2.2:24904"
+    ]
   },
   "permissions": [
     "core:default",
