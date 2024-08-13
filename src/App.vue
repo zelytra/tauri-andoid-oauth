@@ -29,11 +29,13 @@ import {fetch} from "@tauri-apps/plugin-http";
 const response = ref<string>("")
 
 onMounted(async () => {
-  await fetch("http://10.0.2.2:8080/ping", {method: 'GET'}).then(async (r: Response) => {
-    response.value = await r.text();
+  console.log('mount')
+  const r = await fetch("http://10.0.2.2:8080/ping", {method: 'GET'}).then(async (r: Response) => {
+    return await r.text();
   })
-  window.open(window.location.origin+"/#state=qsdqsdqsdqdsqsd")
-  console.log(window.location)
+  console.log(r)
+  //window.open(window.location.origin+"/#state=qsdqsdqsdqdsqsd")
+  //console.log(window.location)
 })
 </script>
 
