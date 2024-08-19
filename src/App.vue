@@ -34,6 +34,7 @@ onMounted(async () => {
     return await r.text();
   })
   console.log(r)
+  response.value = r;
   //window.open(window.location.origin+"/#state=qsdqsdqsdqdsqsd")
   //console.log(window.location)
 })
